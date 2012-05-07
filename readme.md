@@ -1,7 +1,5 @@
 #### Tuenti Challenge 2012 contest solutions
 
-one folder per author
-
-
+If you want to submit your solutions, please fork the repo and pull a request in a separate folder.
 
 
