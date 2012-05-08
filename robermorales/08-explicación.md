@@ -18,25 +18,25 @@ Si aplicamos las transformaciones indicadas sobre el conjunto actual de forma in
 	
 La función replace es lenta y podemos optimizar este comportamiento recorriendo las líneas en sentido inverso. Así, volvemos a convertir un problema de tamaño desconocido en otro casi acotado. Ejemplo
 
-a=>bc
-b=>def
-c=>ghi
+	a=>bc
+	b=>def
+	c=>ghi
 
 Paso 1 (identidad):
 	
-a=>a,b=>b,...
+	a=>a,b=>b,...
 
 Paso 2 (última línea):
 	
-a=>a,b=>b,c=>ghi
+	a=>a,b=>b,c=>ghi
 
 Paso 3 (penúltima línea):
 
-a=>a,b=>def,c=>ghi
+	a=>a,b=>def,c=>ghi
 
 Paso 4 (primera línea y momento clave):
 	
-a=>defghi,b=>def,c=>ghi
+	a=>defghi,b=>def,c=>ghi
 
 En este momento aplicamos la transformación, pero, por supuesto, no concatenamos el resultado, sino que simplemente vamos haciendo update sobre el MD5 ya que la cadena resultante no la llegamos a necesitar para nada.
 
